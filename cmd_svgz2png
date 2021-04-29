@@ -1,0 +1,1 @@
+\ls -1 *svgz | perl -npe 's/^((.*).svgz)$/gzip -d -k -S .svgz $1;mv $2 $2.svg;rsvg-convert $2.svg > $2.png;rm $2.svg/'
